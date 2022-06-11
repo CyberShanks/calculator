@@ -1,0 +1,95 @@
+h1 {
+    font-size: 30px;
+}
+
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calculator-body {
+    border-style: solid;
+    border-width: 5px;
+    padding: 10px;
+    height: 450px; /*change this to % of body*/
+    width: 300px; /*change this to % of body*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#screen {
+    border-style: solid;
+    border-width: 1px;
+    height: 80px;
+    width: 100%;
+}
+
+#button-pad {
+    display: flex;
+    padding-top: 20px;
+}
+
+.num {
+    padding: 5px;
+    font-size: 50px;
+    border-style: solid;
+    border-width: 1px;
+    width: 51px;
+    height: 51px;
+}
+
+.opr {
+    padding: 5px;
+    font-size: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 100%;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opr, .num{
+    text-align: center;
+}
+
+#num-pad {
+    width: 75%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    gap: 25px;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#operators {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#mix {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    align-items: center;
+    gap: 22px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/* 1350-628 = width = 722
+111-1211 = height = 1100
+width:height = 1:1.5 maybe 1:1.75 or 1:1.6 */
