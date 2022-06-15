@@ -35,7 +35,6 @@ delButton.addEventListener('click', () => {
     mathString = mathString.slice(0, mathString.length - 1)
     //detect the most recent character in the string remaining to determine if enable operations
     lastChar = mathString.slice(-1);
-    console.log(lastChar);
     numbers.forEach(number => number.disabled = false);
     if (lastChar == "+" || lastChar == "-" || lastChar == "*" || lastChar == "/") {
         //disable the operations
@@ -70,25 +69,20 @@ function Evaluate(calculation) {
     //55-6*2/6+13=
     //55+6=
     var operator = 0;
-    console.log(calculation);
+
     for (let index = 0; index < calculation.length; index++) {
         if (OperatorFind(calculation[index])) {
             var num1 = Number(calculation.slice(0, index));
-            console.log("number1 = " + num1);
-            console.log("index = " + index);
             operator = OperatorFind(calculation[index]);
             if (operator == 5){
                 //if operator is =
                 answer.textContent = calculation.slice(0, calculation.length - 1);
                 return;
             }
-            console.log(operator + " is the operator from 1st loop");
             //problem occurs after this point. no immediate solution !?
             for (let index2 = index + 1; index2 < calculation.length; index2++) {
-                console.log("index rn -> " + index2);
                 if (OperatorFind(calculation[index2])) {
                     var num2 = Number(calculation.slice(index+1, index2));
-                    console.log(num2);
                     calculation = Operate(num1, num2, operator) + calculation.slice(index2, calculation.length);
                     Evaluate(calculation);
                     return;
