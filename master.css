@@ -24,6 +24,10 @@ h1 {
     border-width: 1px;
     height: 80px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #button-pad {
@@ -87,6 +91,9 @@ button {
     padding: 0;
 }
 
+#answer {
+    font-size: 20px;
+}
 /* 1350-628 = width = 722
 111-1211 = height = 1100
 width:height = 1:1.5 maybe 1:1.75 or 1:1.6 */
