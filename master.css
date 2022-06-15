@@ -43,7 +43,7 @@ h1 {
     height: 60px;
 }
 
-.opr, .spc {    
+.opr, .spc , #eql{    
     font-size: 35px;
     border-style: solid;
     border-width: 1px;
@@ -55,7 +55,7 @@ h1 {
     align-items: center;
 }
 
-.opr, .num, .spc{
+.opr, .num, .spc, #eql{
     text-align: center;
 }
 
